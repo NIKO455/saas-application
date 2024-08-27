@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Feature1Controller;
+use App\Http\Controllers\Feature2Controller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,8 @@ Route::get('/dashboard', function () {
 Route::get('/feature1', [Feature1Controller::class, 'index'])->name('feature1.index');
 Route::post('/feature1', [Feature1Controller::class, 'calculate'])->name('feature1.store');
 
-Route::get('/feature2', function () {
-    return Inertia::render('Feature2/Index');
-})->name('feature2.index');
+Route::get('/feature2', [Feature2Controller::class, 'index'])->name('feature2.index');
+Route::post('/feature2', [Feature2Controller::class, 'calculate'])->name('feature2.store');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

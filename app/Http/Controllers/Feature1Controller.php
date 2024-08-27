@@ -35,8 +35,8 @@ class Feature1Controller extends Controller
             'number2' => ['required', 'numeric'],
         ]);
 
-        $number1 = (float)$data['number1'];
-        $number2 = (float)$data['number2'];
+        $number1 = (float) $data['number1'];
+        $number2 = (float) $data['number2'];
 
         $user->decreaseCredits($this->feature->required_credits);
 
