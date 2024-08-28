@@ -27,7 +27,9 @@ const Feature = ({ feature, answer, children }) => {
                     )}
                     <div className="flex justify-between">
                         <p>{feature.description}</p>
-                        <p>Requires {feature.required_credits} credits</p>
+                        <p className="italic">
+                            Requires {feature.required_credits} credits
+                        </p>
                     </div>
                     <div
                         className={`mt-6 rounded relative ${
@@ -50,9 +52,15 @@ const Feature = ({ feature, answer, children }) => {
                                         d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
                                     />
                                 </svg>
-                                <a href="#" className="mt-2">
-                                    Buy Credits
-                                </a>
+                                <p className="mt-2">
+                                    You don't have enough credits for this
+                                    feature.{" "}
+                                    <span>
+                                        <a href="#" className="underline">
+                                            Buy credits
+                                        </a>
+                                    </span>
+                                </p>
                             </div>
                         )}
                         <div

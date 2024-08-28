@@ -44,9 +44,11 @@ const Index = ({ feature, answer }) => {
                     </div>
                 </div>
 
-                <PrimaryButton className="mt-4" disabled={processing}>
-                    Submit
-                </PrimaryButton>
+                <div className="flex justify-end">
+                    <PrimaryButton className="mt-4" disabled={processing}>
+                        Calculate
+                    </PrimaryButton>
+                </div>
             </form>
         </Feature>
     );
